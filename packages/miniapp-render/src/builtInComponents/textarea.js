@@ -132,7 +132,7 @@ export default {
       domNode.__setAttributeWithoutUpdate('focus-state', false);
       if (domNode.__textareaOldValue !== undefined && domNode.value !== domNode.__textareaOldValue) {
         domNode.__textareaOldValue = undefined;
-        this.callEvent('change', evt, pageId, nodeId);
+        this.callEvent('change', evt, null, pageId, nodeId);
       }
       this.callSimpleEvent('blur', evt, domNode);
     }
